@@ -3,12 +3,12 @@ kind : Pod
 metadata :
   name : exec 
 spec:
-  container :
+  containers :
     - name : nginx
       image : nginx:1.14.2
       ports :
         - containerPort : 80
-  container :
+  containers :
     - name : alpine
       image : alpine
       args :

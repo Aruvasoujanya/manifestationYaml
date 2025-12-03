@@ -3,12 +3,12 @@ kind : Pod
 metadata :
   name :  ngnixhttpd-pod
 spec :
-  container :
+  containers :
     - name : nginx-pod
       image : nginx
       ports :
         - containerPort : 80
-  container :
+  containers :
     - name : httpd-pod
       image : httpd
       ports :
