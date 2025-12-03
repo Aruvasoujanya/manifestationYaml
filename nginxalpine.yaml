@@ -1,0 +1,18 @@
+cdapiversion : v1
+kind : Pod
+metadata :
+  name : exec 
+spec:
+  container :
+    - image : nginx:1.14.2
+      name : nginx
+      ports :
+        - containerPort : 80
+  container :
+    - image : alpine
+      name : alpine
+      args :
+        - sleep
+        - 1d
+     
+     
