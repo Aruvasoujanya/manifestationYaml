@@ -8,7 +8,7 @@ spec:
       image: ngin
       ports:
         - containerPort: 80
-  containers:      
+      
     - name: alpine-2
       image: alpine
       args:
