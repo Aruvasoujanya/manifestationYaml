@@ -3,11 +3,12 @@ kind: Pod
 metadata:
   name: nginxapl3s
 spec:
-  container:
+  containers:
     - name: nginx-1
       image: ngin
       ports:
         - containerPort: 80
+  containers:      
     - name: alpine-2
       image: alpine
       args:
