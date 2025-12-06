@@ -16,7 +16,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: Restart-onfail
+  name: restart-onfail
 spec: 
   restartPolicy: OnFailure
   containers:
