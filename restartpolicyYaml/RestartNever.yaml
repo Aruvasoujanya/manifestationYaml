@@ -5,8 +5,8 @@ metadata:
 spec:
   restartPolicy: Never
   container: 
-    name: restart-Never
-    image: alpine
-    args:
-      - sleep
-      - 10s
+    - name: restart-Never
+      image: alpine
+      args:
+        - sleep
+        - 10s
