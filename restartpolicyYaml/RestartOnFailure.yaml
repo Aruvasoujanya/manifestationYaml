@@ -20,7 +20,7 @@ metadata:
 spec: 
   restartPolicy: OnFailure
   containers:
-    - name: OnFail
+    - name: onfail
       image: alpine
       args:
         - sleep
