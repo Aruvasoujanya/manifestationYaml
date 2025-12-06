@@ -4,7 +4,7 @@ metadata:
   name: Restart-OnFailure
 spec: 
   restartPolicy: OnFailure
-  container:
+  containers:
     - name: OnFailure
       image: alpine
       args:
@@ -19,7 +19,7 @@ metadata:
   name: Restart-OnFailure
 spec:
   restartPolicy: OnFailure
-  container:
+  containers:
     - name: OnFailure
       image: alpine
       args:
