@@ -11,7 +11,7 @@ spec:
       restartPolicy: OnFailure
       containers:
         - name: apline-job
-          image: apline
+          image: alpine
           command:
             - sleep
             - 10g   
@@ -28,7 +28,7 @@ spec:
       restartPolicy: OnFailure
       containers:
         - name: apline-job
-          image: apline
+          image: alpine
           command:
             - sleep
             - 10s
