@@ -1,15 +1,34 @@
 apiVersion: batch/v1
 kind: Job
 metadata: 
-  name: joblearn
+  name: joblearn-1
 spec:
+  backoffLimit: 2
   template: 
     metadata: 
       name: containerspec
     spec:
+      restartPolicy: OnFailure
       container:
         - name: apline-job
           image: apline
           command:
             - sleep
-            - 10s   
+            - 10sm   
+---
+apiVersion: batch/v1
+kind: Job
+metadata: 
+  name: joblearn-2
+spec:
+  template: 
+    metadata: 
+      name: containerspec
+    spec:
+      restartPolicy: OnFailure
+      container:
+        - name: apline-job
+          image: apline
+          command:
+            - sleep
+            - 10s
