@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metsdata: 
+  name: joblearn
+spec:
+  template: 
+    metadata: 
+      name: containerspec
+    spec:
+      container:
+        - name: apline-job
+          image: apline
+          command:
+            - sleep
+            - 10s   
