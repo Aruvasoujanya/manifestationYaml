@@ -12,7 +12,7 @@ spec:
         - sleep
         - 3sm
 
-------------------------        
+---     
 
 apiVersion: v1
 kind: Pod
