@@ -9,7 +9,7 @@ spec:
       name: containerspec
     spec:
       restartPolicy: OnFailure
-      container:
+      containers:
         - name: apline-job
           image: apline
           command:
@@ -26,7 +26,7 @@ spec:
       name: containerspec
     spec:
       restartPolicy: OnFailure
-      container:
+      containers:
         - name: apline-job
           image: apline
           command:
