@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata: 
+  name: cronjob
+spec:
+  backoffLimit: 3
+  jobTemplate:
+    metadata:
+      name: tem-job
+    spec:
+      backoffLimit: 3
+      template:
+        metadata:
+          name: containerjob
+        spec:
+          restartPolicy  
+          containers:
+            - name: alpine
+              image: alpine
+              command:
+                - sleep
+                - 5fm
+
