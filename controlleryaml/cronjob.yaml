@@ -13,7 +13,7 @@ spec:
         metadata:
           name: containerjob
         spec:
-          restartPolicy  
+          restartPolicy: OnFailure  
           containers:
             - name: alpine
               image: alpine
