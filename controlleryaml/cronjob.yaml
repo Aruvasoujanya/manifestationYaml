@@ -3,7 +3,7 @@ kind: CronJob
 metadata: 
   name: cronjob
 spec:
-  schedule: " * * * * * " 
+  schedule: "* * * * *" 
   jobTemplate:
     metadata:
       name: tem-job
