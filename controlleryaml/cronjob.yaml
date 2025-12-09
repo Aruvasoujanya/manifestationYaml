@@ -3,11 +3,11 @@ kind: CronJob
 metadata: 
   name: cronjob
 spec:
-  backoffLimit: 3
   jobTemplate:
     metadata:
       name: tem-job
     spec:
+      backoffLimit: 3
       template:
         metadata:
           name: containerjob
