@@ -3,7 +3,7 @@ kind: CronJob
 metadata: 
   name: cronjob
 spec:
-  schedule: "* * * * *" 
+  schedule: "5 * * * *" 
   jobTemplate:
     metadata:
       name: tem-job
@@ -13,11 +13,11 @@ spec:
         metadata:
           name: containerjob
         spec:
-          restartPolicy: OnFailure  
+          restartPolicy: OnFailure+  
           containers:
             - name: alpine
               image: alpine
               command:
                 - sleep
-                - 5fm
+                - 10s
 
