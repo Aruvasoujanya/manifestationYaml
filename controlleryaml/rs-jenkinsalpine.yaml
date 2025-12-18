@@ -17,7 +17,7 @@ spec:
       containers:
         - name: jenkin
           image: jenkins/jenkins:lts-jdk17
-          port:
+          ports:
             - containerPort: 8080
         - name: alpin
           image: alpine:3
@@ -25,3 +25,28 @@ spec:
             - sleep
             - 1d   
             
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: jenkins
+spec:
+ minReadySeconds: 2
+ replicas: 5
+ selector:
+   matchLabels:
+     app: jenkins
+ template:
+   metadata:
+     name: jenkins
+     labels:
+       app: jenkins
+   spec:
+     containers:
+       - name: jenkins
+         image: jenkins
+         ports: 
+           - containerPort: 8080
+
+
+
